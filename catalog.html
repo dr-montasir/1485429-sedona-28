@@ -32,6 +32,66 @@
         <!-- Main Content -->
         <main>
             <section>
+                <form action="https://echo.htmlacademy.ru/courses" method="get">
+                    <fieldset>
+                        <legend>Инфраструктура:</legend>
+                        <input type="checkbox" name="pool" id="pool-field" checked>
+                        <label for="pool-field">Бассейн</label> 
+                        <br>
+                        <input type="checkbox" name="parking" id="parking-field">
+                        <label for="parking-field">Парковка</label>
+                        <br>
+                        <input type="checkbox" name="wi-fi" id="wi-fi-field">
+                        <label for="wi-fi-field">Wi-Fi</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Тип жилья:</legend>
+                        <input type="checkbox" name="hotel" id="hotel-field" checked>
+                        <label for="hotel-field">Гостиница</label> 
+                        <br>
+                        <input type="checkbox" name="motel" id="motel-field" checked>
+                        <label for="motel-field">Мотель</label>
+                        <br>
+                        <input type="checkbox" name="apartments" id="apartments-field" checked>
+                        <label for="apartments-field">Апартаменты</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Стоимость в сутки (Р):</legend>
+                        <label> 
+                            <span>от</span>
+                            <input type="number" name="price-from" min="0" max="3000"  step="500" value="0">
+                        </label>
+                        <label>
+                            <span>До</span>
+                            <input type="number" name="price-to" min="500" max="3500" step="500" value="3000">
+                        </label>
+                        <input type="range" name="from-slider" min="0" max="3000" step="500" value="0">
+                        <input type="range" name="to-slider" min="500" max="3500" step="500" value="3000">
+                    </fieldset>
+
+                    <button type="submit">Показать</button>
+                </form>
+
+                <section>
+                    <span>Найдено: 3</span>
+                    <span>Сортировка:</span>
+                    <ul>
+                        <li><a href="">По цене</a></li>
+                        <li><a href="">По типу</a></li>
+                        <li><a href="">По рейтингу</a></li>
+                    </ul>
+                    <div>
+                        <p>
+                            <a href=""><img src="img/icon-up-dir.svg" width="11" height="10" alt="up"></a>
+                            <a href=""><img src="img/icon-down-dir.svg" width="11" height="10" alt="down"></a>
+                        </p>
+                    </div>
+                </section>
+            </section>
+        
+            <section>
                 <article>
                     <figure>
                         <a href="">
