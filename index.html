@@ -9,7 +9,6 @@
         <header>
             <nav>
                 <a href="index.html">
-                    <!-- <img src="img/logo.png" width="138" height="70" alt="Седона"> -->
                     <img src="img/logo-sedona.svg" width="138" height="70" alt="Седона">
                 </a>
                 <ul>
@@ -126,6 +125,33 @@
                     Укажите предполагаемые даты поездки,<br>
                     и мы покажем вам лучшие предложения гостиниц в седоне
                 </p>
+                <section>
+                    <h3>ПОИСК ГОСТИНИЦЫ В седоне</h3>
+                    <form action="https://echo.htmlacademy.ru/courses" method="get">
+                        <div>
+                            <label for="arrival-date">Дата заезда:</label> 
+                            <input type="text" name="arrival-date" id="arrival-date" value="24 апреля 2017" required>
+                        </div>
+                      
+                        <div>
+                            <label for="departure-date">Дата выезда:</label> 
+                            <input type="text" name="departure-date" id="departure-date" value="24 апреля 2017" required>
+                        </div>
+                        <br> 
+                        <div>
+                            <label for="adults-field">Взрослые:</label>
+                            <button type="button">+</button> 
+                            <input type="number" name="adults" id="adults-field" min="1" max="10" value="2" required> 
+                            <button type="button">-</button> 
+
+                            <label>Дети:</label> 
+                            <button type="button">+</button>
+                            <input type="number" name="children" id="children-field" min="0" max="10" value="0" required>
+                            <button type="button">-</button>
+                        </div>
+                        <button type="submit">Найти</button>
+                    </form>
+                </section>
             </section>
 
             <section>
