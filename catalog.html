@@ -3,37 +3,44 @@
     <head>
         <meta charset="utf-8" />
         <title>Седона - Гостиницы</title>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body>
+    <body class="page-body">
         <!-- Header -->
-        <header>
-            <nav>
-                <a href="index.html">
+        <header class="main-header">
+            <nav class="main-navigation">
+                <a class="main-header-logo" href="index.html">
                     <img src="img/logo-sedona.svg" width="138" height="70" alt="Седона">
                 </a>
-                <ul>
-                    <li>
-                        <a href="">Информация</a>
-                    </li>
-                    <li>
-                        <a href="">Фото и видео</a>
-                    </li>
-                    <li>
-                        <a href="">Карта штата</a>
-                    </li>
-                    <li>
-                        <a href="catalog.html">Гостиницы</a>
-                    </li>
-                </ul>
+                <div class="main-navigation-wrapper">
+                    <div class="container">
+                        <ul class="site-navigation">
+                            <li>
+                                <a href="">Информация</a>
+                            </li>
+                            <li>
+                                <a href="">Фото и видео</a>
+                            </li>
+                            <li>
+                                <a href="">Карта штата</a>
+                            </li>
+                            <li>
+                                <a href="catalog.html">Гостиницы</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
         <!-- /End Header -->
 
         <!-- Main Content -->
-        <main>
-            <section>
-                <form action="https://echo.htmlacademy.ru/courses" method="get">
-                    <fieldset>
+        <main class="container">
+            <section class="filter">
+                <form class="filter-form" action="https://echo.htmlacademy.ru/courses" method="get">
+                    <fieldset class="Infrastructure">
                         <legend>Инфраструктура:</legend>
                         <input type="checkbox" name="pool" id="pool-field" checked>
                         <label for="pool-field">Бассейн</label> 
@@ -45,7 +52,7 @@
                         <label for="wi-fi-field">Wi-Fi</label>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="housing-type">
                         <legend>Тип жилья:</legend>
                         <input type="checkbox" name="hotel" id="hotel-field" checked>
                         <label for="hotel-field">Гостиница</label> 
@@ -57,7 +64,7 @@
                         <label for="apartments-field">Апартаменты</label>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="cost-per-night">
                         <legend>Стоимость в сутки (Р):</legend>
                         <label> 
                             <span>от</span>
@@ -73,43 +80,43 @@
 
                     <button type="submit">Показать</button>
                 </form>
-
-                <section>
+            </section>
+        
+            <section class="filter-result">
+                <section class="filter-sort">
                     <span>Найдено: 3</span>
                     <span>Сортировка:</span>
-                    <ul>
+                    <ul class="sort-by">
                         <li><a href="">По цене</a></li>
                         <li><a href="">По типу</a></li>
                         <li><a href="">По рейтингу</a></li>
                     </ul>
-                    <div>
+                    <div class="sort-btn">
                         <p>
-                            <a href=""><img src="img/icon-up-dir.svg" width="11" height="10" alt="up"></a>
-                            <a href=""><img src="img/icon-down-dir.svg" width="11" height="10" alt="down"></a>
+                            <a class="sort-up-btn" href=""><img src="img/icon-up-dir.svg" width="11" height="10" alt="up"></a>
+                            <a class="sort-down-btn" href=""><img src="img/icon-down-dir.svg" width="11" height="10" alt="down"></a>
                         </p>
                     </div>
                 </section>
-            </section>
-        
-            <section>
-                <article>
-                    <figure>
+
+                <article class="hotel-result">
+                    <figure class="hotel-img">
                         <a href="">
                             <img src="img/hotel.jpg" width="135" height="90" alt="Гостиница">
                         </a>
                     </figure>
 
-                    <div>
+                    <div class="hotel-info">
                         <h2>
                             <a href="">Amara Resort & Spa</a>
                         </h2>
                         <span>Гостиница</span>
                         <span>ОТ 4000 Р.</span>
-                        <a href="">ПОДРОБНЕЕ</a>
-                        <a href="">ЗАБРОНИРОВАТЬ</a>
+                        <a class="more" href="">ПОДРОБНЕЕ</a>
+                        <a class="book-now" href="">ЗАБРОНИРОВАТЬ</a>
                     </div>
 
-                    <div>
+                    <div class="hotel-rating">
                         <p>
                             <img src="img/star.svg" width="19" height="17" alt="star">
                             <img src="img/star.svg" width="19" height="17" alt="star">
@@ -121,24 +128,24 @@
                     </div>
                 </article>
 
-                <article>
-                    <figure>
+                <article class="hotel-result">
+                    <figure class="hotel-img">
                         <a href="">
                             <img src="img/motel.jpg" width="135" height="90" alt="Мотель">
                         </a>
                     </figure>
 
-                    <div>
+                    <div class="hotel-info">
                         <h2>
                             <a href="">Desert Quail Inn</a>
                         </h2>
                         <span>Мотель</span>
                         <span>ОТ 3000 Р.</span>
-                        <a href="">ПОДРОБНЕЕ</a>
-                        <a href="">ЗАБРОНИРОВАТЬ</a>
+                        <a class="more" href="">ПОДРОБНЕЕ</a>
+                        <a class="book-now" href="">ЗАБРОНИРОВАТЬ</a>
                     </div>
 
-                    <div>
+                    <div class="hotel-rating">
                         <p>
                             <img src="img/star.svg" width="19" height="17" alt="star">
                             <img src="img/star.svg" width="19" height="17" alt="star">
@@ -148,24 +155,24 @@
                     </div>
                 </article>
 
-                <article>
-                    <figure>
+                <article class="hotel-result">
+                    <figure class="hotel-img">
                         <a href="">
                             <img src="img/apartments.jpg" width="135" height="90" alt="Апартаменты">
                         </a>
                     </figure>
 
-                    <div>
+                    <div class="hotel-info">
                         <h2>
                             <a href="">Villas at Poco Diablo</a>
                         </h2>
                         <span>Апартаменты</span>
                         <span>ОТ 2000 Р.</span>
-                        <a href="">ПОДРОБНЕЕ</a>
-                        <a href="">ЗАБРОНИРОВАТЬ</a>
+                        <a class="more" href="">ПОДРОБНЕЕ</a>
+                        <a class="book-now" href="">ЗАБРОНИРОВАТЬ</a>
                     </div>
 
-                    <div>
+                    <div class="hotel-rating">
                         <p>
                             <img src="img/star.svg" width="19" height="17" alt="star">
                             <img src="img/star.svg" width="19" height="17" alt="star">
@@ -178,29 +185,29 @@
         <!-- /End Main -->
 
         <!-- Footer -->
-        <footer>
-            <section>
+        <footer class="page-footer">
+            <section class="footer-contact">
                 <h2>#visitSEDONA</h2>
                 <p>ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
             </section>
 
-            <section>
-                <ul>
-                    <li>
-                        <a href="#">Твиттер</a>
+            <section class="social-networks">
+                <ul class="networks-list">
+                    <li class="network-item">
+                        <a href="#"><span class="visually-hidden">Твиттер</span></a>
                     </li>
-                    <li>
-                        <a href="#">Фейсбук</a>
+                    <li class="network-item">
+                        <a href="#"><span class="visually-hidden">Фейсбук</span></a>
                     </li>
-                    <li>
-                        <a href="#">Ютьюб</a>
+                    <li class="network-item">
+                        <a href="#"><span class="visually-hidden">Ютьюб</span></a>
                     </li>
                 </ul>
             </section>
 
-            <p>
+            <p class="developed-by">
                 Website by
-                <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+                <a href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">HTML Academy</span></a>
             </p>
         </footer>
         <!-- /End Footer -->
