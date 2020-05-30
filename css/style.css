@@ -21,7 +21,6 @@
 /* Globale */
 
 body {
-	min-width: 960px;
 	margin: 0;
 	padding: 0;
 	
@@ -30,7 +29,7 @@ body {
 	color: var(--basic-black);
 	text-transform: uppercase;
 	font-weight: 400;
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	background-color: var(--white-smoke-level1);
 }
 
@@ -41,6 +40,19 @@ a {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+/* Class visually-hidden */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Main Navigation */
@@ -62,9 +74,13 @@ img {
 	color: var(--basic-black);
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a:focus,
+.site-navigation a:active {
 	color: var(--pine-cone);
+}
+
+.site-navigation a:hover {
+	color: var(--basic-seagull);
 }
 
 /* Introduction Section */
