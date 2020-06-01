@@ -9,7 +9,9 @@
 	--night-rider: #333333;
 
 	--basic-seagull: #81b3d2;
+	--basic-seagull-hover: #669ec0;
 	--pine-cone: #766357;
+	--pine-cone-hover: #604e43;
 
 	--basic-gainsboro: #e5e5e5;
 	--very-light-grey: #cacaca;
@@ -74,28 +76,45 @@ img {
 	color: var(--basic-black);
 }
 
+.site-navigation a:hover {
+	color: var(--basic-seagull);
+}
+
 .site-navigation a:focus,
 .site-navigation a:active {
 	color: var(--pine-cone);
 }
 
-.site-navigation a:hover {
-	color: var(--basic-seagull);
+/* Main content sections */
+
+.container {
+	background-color: var(--basic-white);
+}
+
+.container h2 {
+	font-weight: 700;
+	font-size: 21px;
+}
+
+.introduction, .advantages, .interested {
+	text-align: center;
 }
 
 /* Introduction Section */
 
-.introduction {
-	text-align: center;
-}
-
-.introduction h2 {
-	font-size: 21px;
-	font-weight: 700;
-}
-
 .introduction p {
 	color: var(--night-rider);
+}
+
+/* Advantages Section */
+
+.advantages h2, .advantages h3 {
+	line-height: 21px;
+}
+
+.real-town, .bridge {
+	background-color: var(--basic-seagull);
+	color: var(--basic-white);
 }
 
 /* Button */
@@ -105,11 +124,6 @@ img {
 }
 
 /* Interested Section */
-
-.interested {
-	text-align: center;
-	background-color: var(--basic-white);
-}
 
 .interested h2, .interested p {
 	line-height: 24px;
@@ -136,6 +150,96 @@ img {
 
 .search {
 	background-color: var(--basic-seagull);
+}
+
+.sedona-map {
+	background-color: var(--basic-white);
+}
+
+.filter {
+	background-image: url("../img/filter-background.jpg");
+	background-repeat: no-repeat;
+	color: var(--basic-white);
+	line-height: 21px;
+	font-size: 14px;
+}
+
+.filter fieldset {
+	border: 0;
+}
+
+.filter legend {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.filter-sort {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.found {
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.sort-by {
+	list-style: none;
+}
+
+.sort-by a {
+	border-bottom: 1px dotted var(--basic-seagull);
+	color: var(--basic-black);
+	font-size: 12px;
+}
+
+.sort-by a:hover {
+	border-bottom: none;
+	color: var(--basic-seagull);
+}
+
+.sort-by a:focus,
+.sort-by a:active {
+	color: var(--basic-seagull);
+}
+
+.hotel-name {
+	color: var(--basic-black);
+}
+
+.hotel-name:hover {
+	color: var(--basic-seagull);
+}
+
+.more {
+	line-height: 21px;
+	font-weight: 700;
+	color: var(--basic-white);
+	background-color: var(--basic-seagull);
+	padding: 3px 16px 3px 17px;
+}
+
+.more:hover {
+	background-color: var(--basic-seagull-hover);
+}
+
+.book-now {
+	line-height: 21px;
+	font-weight: 700;
+	color: var(--basic-white);
+	background-color: var(--pine-cone);
+	padding: 3px 17px 3px 16px;
+}
+
+.book-now:hover {
+	background-color: var(--pine-cone-hover);
+}
+
+.hotel-rating span {
+	color: var(--dim-gray);
+	background-color: var(--white-smoke-level1);
+	padding: 3px 12px 3px 15px;
 }
 
 /* Main footer */
