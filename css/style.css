@@ -6,6 +6,7 @@
 	--white-smoke-level2: #eeeeee;
 
 	--basic-black: #000000;
+	--basic-black-thirty-percent: rgba(0, 0, 0, 0.3);
 	--night-rider: #333333;
 
 	--basic-seagull: #81b3d2;
@@ -72,17 +73,24 @@ img {
 	list-style: none;
 }
 
+/* None or Normal - Покой */
 .site-navigation a {
 	color: var(--basic-black);
 }
 
+/* Hover - Наведение */
 .site-navigation a:hover {
 	color: var(--basic-seagull);
 }
 
-.site-navigation a:focus,
-.site-navigation a:active {
+/* Focused - Активный, Находимся на странице */
+.site-navigation a:focus {
 	color: var(--pine-cone);
+}
+
+/* Pressed - Нажатие */
+.site-navigation a:active {
+	color: var(--basic-black-thirty-percent);
 }
 
 /* Main content sections */
@@ -157,8 +165,7 @@ img {
 }
 
 .filter {
-	background-image: url("../img/filter-background.jpg");
-	background-repeat: no-repeat;
+	background: var(--basic-seagull) url("../img/filter-background.jpg") no-repeat center top;
 	color: var(--basic-white);
 	line-height: 21px;
 	font-size: 14px;
@@ -188,20 +195,28 @@ img {
 	list-style: none;
 }
 
+/* None or Normal - Покой */
 .sort-by a {
-	border-bottom: 1px dotted var(--basic-seagull);
-	color: var(--basic-black);
+	border-bottom: 1px dashed var(--basic-seagull);
+	color: var(--basic-black-thirty-percent);
 	font-size: 12px;
 }
 
+/* Hover - Наведение */
 .sort-by a:hover {
-	border-bottom: none;
 	color: var(--basic-seagull);
 }
 
-.sort-by a:focus,
-.sort-by a:active {
+/* Focused - Активный */
+.sort-by a:focus {
 	color: var(--basic-seagull);
+	border-bottom: none;
+}
+
+/* Pressed - Нажатие */
+.sort-by a:active {
+	color: var(--basic-black);
+	border-bottom: none;
 }
 
 .hotel-name {
