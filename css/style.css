@@ -83,7 +83,7 @@ img {
 	color: var(--basic-seagull);
 }
 
-/* Focused - Активный, Находимся на странице */
+/* Focused - Активный */
 .site-navigation a:focus {
 	color: var(--pine-cone);
 }
@@ -91,6 +91,11 @@ img {
 /* Pressed - Нажатие */
 .site-navigation a:active {
 	color: var(--basic-black-thirty-percent);
+}
+
+/* Находимся на странице */
+.site-navigation-current a {
+  color: var(--pine-cone);
 }
 
 /* Main content sections */
