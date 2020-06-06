@@ -176,12 +176,13 @@ img {
 
 /* Advantages Section */
 
-.advantages h2, .advantages h3 {
-	line-height: 21px;
+.advantages {
+	outline: 5px solid rgba(181, 0, 204, 0.5);
+	outline-offset: -5px;
 }
 
-.comfort {
-	background-color: var(--basic-white);
+.advantages h2, .advantages h3 {
+	line-height: 21px;
 }
 
 .real-town, .bridge {
@@ -189,13 +190,88 @@ img {
 	color: var(--basic-white);
 }
 
+.real-town {
+	outline: 5px solid rgba(247, 202, 24, 0.7);
+	outline-offset: -5px;
+}
+
+.real-town h2, .bridge h2 {
+	outline: 5px solid rgba(0, 0, 200, 0.5);
+	outline-offset: -5px;
+}
+
+.real-town h3, .bridge h3 {
+	outline: 5px solid rgba(0, 200, 0, 0.5);
+	outline-offset: -5px;
+}
+
+.real-town p, .bridge p {
+	outline: 5px solid rgba(200, 200, 0, 0.5);
+	outline-offset: -5px;
+}
+
+.real-town img, .bridge img {
+	outline: 5px solid rgba(200, 0, 0, 0.5);
+	outline-offset: -5px;
+}
+
+.comfort {
+	background-color: var(--basic-white);
+
+	outline: 5px solid rgba(211, 38, 0, 0.7);
+	outline-offset: -5px;
+}
+
+.housing, .food, .souvenirs {
+	outline: 5px solid rgba(211, 38, 211, 0.7);
+	outline-offset: -5px;
+}
+
+.housing h2, .food h2, .souvenirs h2 {
+	outline: 5px solid rgba(0, 255, 211, 0.7);
+	outline-offset: -5px;
+}
+
+.housing p, .food p, .souvenirs p {
+	outline: 5px solid rgba(0, 0, 70, 0.7);
+	outline-offset: -5px;
+}
+
+.bridge {
+	outline: 5px solid rgba(247, 202, 24, 0.7);
+	outline-offset: -5px;
+}
+
 .attractions {
 	background-color: var(--white-smoke-level2);
+
+	outline: 5px solid rgba(211, 38, 0, 0.7);
+	outline-offset: -5px;
 }
 
 .attractions h3, .attractions p {
 	color: var(--night-rider);
 	font-weight: 400;
+}
+
+.area, .road, .tourist {
+	outline: 5px solid rgba(211, 38, 211, 0.7);
+	outline-offset: -5px;
+}
+
+.area h2, .road h2, .tourist h2 {
+	outline: 5px solid rgba(0, 255, 211, 0.7);
+	outline-offset: -5px;
+}
+
+.area h3, .road h3, .tourist h3 {
+	outline: 5px solid rgba(255, 255, 40, 0.7);
+	outline-offset: -5px;
+}
+
+.area p, .road p, .tourist p {
+	outline: 5px solid rgba(0, 0, 70, 0.7);
+	outline-offset: -5px;
 }
 
 /* Button */
@@ -245,6 +321,9 @@ img {
 
 .sedona-map {
 	background-color: var(--basic-white);
+
+	outline: 5px solid rgba(155, 0, 130, 0.7);
+	outline-offset: -5px;
 }
 
 .filter {
@@ -252,6 +331,21 @@ img {
 	color: var(--basic-white);
 	line-height: 21px;
 	font-size: 14px;
+}
+
+.filter-form {
+	outline: 5px solid rgba(211, 38, 0, 0.7);
+	outline-offset: -5px;
+}
+
+.filter-form button {
+	outline: 5px solid rgba(0, 0, 255, 0.3);
+	outline-offset: -5px;
+}
+
+.infrastructure, .housing-type, .cost-per-night {
+	outline: 5px solid rgba(211, 38, 0, 0.3);
+	outline-offset: -5px;
 }
 
 .filter fieldset {
@@ -317,10 +411,26 @@ img {
 	font-size: 21px;
 	font-weight: 700;
 	line-height: 26px;
+
+	outline: 5px solid rgba(211, 38, 0, 0.3);
+	outline-offset: -5px;
+}
+
+.sort {
+	outline: 5px solid rgba(211, 38, 0, 0.3);
+	outline-offset: -5px;
 }
 
 .sort-by {
 	list-style: none;
+
+	outline: 5px solid rgba(240, 0, 240, 0.7);
+	outline-offset: -5px;
+}
+
+.sort-by li {
+	outline: 5px solid rgba(211, 38, 0, 0.3);
+	outline-offset: -5px;
 }
 
 /* None or Normal - Покой */
@@ -351,6 +461,16 @@ img {
 .sort-by-current a {
   color: var(--basic-seagull);
   border-bottom: none;
+}
+
+.sort-btn p {
+	outline: 5px solid rgba(0, 240, 0, 0.7);
+	outline-offset: -5px;
+}
+
+.sort-btn a {
+	outline: 5px solid rgba(90, 0, 150, 0.7);
+	outline-offset: -5px;
 }
 
 .hotel-name {
