@@ -4,6 +4,8 @@
 	--basic-white: #ffffff;
 	--white-smoke-level1: #f2f2f2;
 	--white-smoke-level2: #eeeeee;
+	--white-smoke-level3: #ebebeb;
+
 	--white-thirty-percent: rgba(255, 255, 255, 0.3);
 	--white-ninety-percent: rgba(255, 255, 255, 0.9);
 
@@ -22,6 +24,7 @@
 	--basic-gainsboro: #e5e5e5;
 	--very-light-grey: #cacaca;
 	--dim-gray: #666666;
+	--dark-gray: #a9a9a9;
 	--basic-silver: #bdbbbc;
 
 	--shadow-dark-green-fifteen-percent: rgba(0, 1, 1, 0.15);
@@ -178,6 +181,10 @@ input[type="checkbox"].visually-hidden {
 }
 
 /* Main content sections */
+
+.content {
+	background-color: var(--basic-white);
+}
 
 .content h2 {
 	font-weight: 700;
@@ -391,39 +398,19 @@ input[type="checkbox"].visually-hidden {
 	padding-bottom: 44px;
 }
 
-.hotel-search {
-	font-weight: 700;
-	margin:0 auto;
-	width: 568px;
-}
-
-.hotel-search .search-popup, .hotel-search .search {
+.search-popup, .search {
 	color: var(--basic-white);
 	font-size: 21px;
-}
-
-.hotel-search-form {
-	background-color: var(--basic-white);
-
-	box-shadow: 0px 7px 15px var(--shadow-dark-green-fifteen-percent);
-
-	margin: 0 0 -395px 0;
-
-	width: 568px;
-	height: 395px;
-
-	position: relative;
-	z-index: 1;
+	text-transform: uppercase;
 }
 
 /* None or Normal - Покой */
 .search-popup {
 	background-color: var(--pine-cone);
+
 	line-height: 26px;
 
 	font-weight: 700;
-
-	text-transform: uppercase;
 
 	width: 568px;
 
@@ -450,12 +437,109 @@ input[type="checkbox"].visually-hidden {
 	color: var(--white-thirty-percent);
 }
 
+/*display: none; I will do in the next step with JavaScript */
+
+.hotel-search {
+	font-weight: 700;
+	margin:0 auto;
+	width: 568px;
+}
+
+.hotel-search-form {
+	background-color: var(--basic-white);
+
+	box-shadow: 0px 7px 15px var(--shadow-dark-green-fifteen-percent);
+
+	margin: 0 0 -395px 0;
+
+	padding: 55px;
+
+	font-size: 14px;
+
+	position: relative;
+	z-index: 1;
+}
+
 .arrival-date {
+	width: 458px;
+
+	margin: 0;
 	padding-bottom: 29px;
+
+	display: flex;
 }
 
 .departure-date {
+	width: 458px;
+
+	margin: 0;
 	padding-bottom: 30px;
+
+	display: flex;
+}
+
+.arrival-date label, .departure-date label {
+	margin: 0;
+	width: 112px;
+
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.arrival-date button,
+.departure-date button {
+	vertical-align: middle;
+	cursor: pointer;
+	margin-left: -30px;
+	padding: 0;
+	background-color: transparent;
+	fill: var(--dark-gray);
+}
+
+.arrival-date svg,
+.departure-date svg {
+	padding-top: 3px;
+}
+
+.arrival-date button:hover,
+.departure-date button:hover {
+	fill: var(--basic-black);
+}
+
+.arrival-date button:focus,
+.departure-date button:focus {
+	outline: none;
+	fill: var(--basic-black);
+}
+
+.arrival-date button:active,
+.departure-date button:active {
+	outline: none;
+	fill: var(--basic-seagull);
+}
+
+.hotel-search-form input[type="text"] {
+	margin: 0;
+	padding: 0 38px 0 13px;
+	width: 295px;
+	height: 38px;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: var(--white-smoke-level1);
+	border: none;
+}
+
+.hotel-search-form input[type="text"]:hover {
+	background-color: var(--white-smoke-level3);
+}
+
+.hotel-search-form input[type="text"]:focus {
+	background-color: var(--basic-white);
+	outline: 2px solid var(--basic-gainsboro);
+}
+
+.hotel-search-form input[type="text"]::placeholder {
+	color: var(--basic-black);
 }
 
 .guests-quantity {
@@ -463,14 +547,79 @@ input[type="checkbox"].visually-hidden {
 	grid-template-columns: 1fr 1fr;
 }
 
-.hotel-search-form input[type="text"] {
-	width: 346px;
+.hotel-search-form input[type="number"] {
+	margin: 0;
+	padding: 0 0 0 13px;
+
+	width: 101px;
 	height: 38px;
+	font-weight: 700;
+
+	text-align: center;
+
+	background-color: var(--white-smoke-level1);
+	border: none;
+	outline: none;
 }
 
-.hotel-search-form input[type="number"] {
-	width: 114px;
+.adults, .children {
+	display: flex;
+}
+
+.adults label, .children label {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.adults label {
+	margin: 0;
+	width: 112px;
+}
+
+.children label {
+	margin: 0 26px 0 0;
+
+	width: 92px;
+
+	text-align: right;
+}
+
+.adults button, .children button {
+	width: 38px;
 	height: 38px;
+
+	cursor: pointer;
+
+	padding: 0;
+	background-color: var(--white-smoke-level1);
+	outline: none;
+	fill: var(--dark-gray);
+}
+
+.adults button:hover, .children button:hover,
+.adults button:focus, .children button:focus {
+	fill: var(--basic-black);
+}
+
+.adults button:active, .children button:active {
+	fill: var(--basic-seagull);
+}
+
+.plus {
+	margin-left: -38px;
+}
+
+.minus {
+	margin-right: -38px;
+	z-index: 1;
+}
+
+.plus svg {
+	padding: 14px 0 13px 0;
+}
+
+.minus svg {
+	padding: 18px 0 17px 0;
 }
 
 /* None or Normal - Покой */
@@ -480,8 +629,9 @@ input[type="checkbox"].visually-hidden {
 
 	font-weight: 700;
 
-	width: 458px;
+	width: 100%;
 
+	margin-top: 54px;
 	padding: 16px 9px 16px 10px;
 }
 
@@ -509,7 +659,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .sedona-map img {
-	margin-bottom: -126px;
+	margin-bottom: -128px;
 }
 
 .filter {
@@ -545,78 +695,59 @@ input[type="checkbox"].visually-hidden {
 
 .filter-result {
 	background-color: var(--basic-white);
-
-	outline: 5px solid rgba(240, 0, 0, 0.7);
-	outline-offset: -5px;
 }
 
 .filter-sort {
 	font-size: 12px;
 	line-height: 18px;
 
-	outline: 5px solid rgba(0, 0, 240, 0.7);
-	outline-offset: -5px;
+	margin: 0;
+
+	padding: 29px 73px 31px 73px;
+
+	display: grid;
+
+	grid-template-columns: 1fr 1fr 6fr 1fr;
 }
 
-.hotel-result {
-	outline: 5px solid rgba(240, 240, 0, 0.7);
-	outline-offset: -5px;
-}
 
-.hotel-img {
-	outline: 5px solid rgba(0, 240, 0, 0.7);
-	outline-offset: -5px;
-}
-
-.hotel-info {
-	outline: 5px solid rgba(0, 0, 240, 0.7);
-	outline-offset: -5px;
-}
-
-.hotel-info h2 {
-	outline: 5px solid rgba(240, 0, 240, 0.7);
-	outline-offset: -5px;
-}
-
-.hotel-info span {
-	outline: 5px solid rgba(0, 240, 240, 0.7);
-	outline-offset: -5px;
-}
-
-.hotel-info .more {
-	outline: 5px solid rgba(240, 0, 0, 0.7);
-	outline-offset: -5px;
-}
-
-.hotel-info .book-now {
-	outline: 5px solid rgba(0, 240, 0, 0.7);
-	outline-offset: -5px;
-}
 
 .found {
 	font-size: 21px;
 	font-weight: 700;
 	line-height: 26px;
 
-	outline: 5px solid rgba(211, 38, 0, 0.3);
-	outline-offset: -5px;
+	padding-right: 8px;
+
+	width: 155px;
 }
 
 .sort {
-	outline: 5px solid rgba(211, 38, 0, 0.3);
-	outline-offset: -5px;
+	padding-top: 2px;
 }
 
 .sort-by {
+	margin: 0;
+
+	padding: 3px 4px 3px 4px;
+
 	list-style: none;
 
-	outline: 5px solid rgba(240, 0, 240, 0.7);
-	outline-offset: -5px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.sort-by li {
-	outline: 5px solid rgba(211, 38, 0, 0.3);
-	outline-offset: -5px;
+.sort-by li:nth-child(7n + 1),
+.sort-by li:nth-child(7n + 3),
+.sort-by li:nth-child(7n + 5),
+.sort-by li:nth-child(7n + 7) {
+	padding-right: 33px;
+}
+
+.sort-by li:nth-child(7n + 2),
+.sort-by li:nth-child(7n + 4),
+.sort-by li:nth-child(7n + 6) {
+	padding-right: 32px;
 }
 
 /* None or Normal - Покой */
@@ -649,37 +780,125 @@ input[type="checkbox"].visually-hidden {
   border-bottom: none;
 }
 
+.sort-btn {
+	text-align: right;
+	padding-top: 9px;
+}
+
+.sort-up-btn {
+	padding-right: 3px;
+}
+
+.sort-down-btn {
+	padding-left: 6px;
+}
+
 .sort-btn p {
-	outline: 5px solid rgba(0, 240, 0, 0.7);
-	outline-offset: -5px;
+	margin: 0;
 }
 
 .sort-btn a {
-	outline: 5px solid rgba(90, 0, 150, 0.7);
-	outline-offset: -5px;
+	fill: var(--very-light-grey);
+}
+
+.sort-btn a:hover, .sort-btn a:focus {
+	fill: var(--basic-black);
+}
+
+.sort-btn a:active, .sort-btn .active {
+	fill: var(--basic-seagull);
+}
+
+.hotel-result {
+	margin: 0;
+
+	padding: 24px 73px 29px 73px;
+
+	border-bottom: 1px solid var(--basic-gainsboro);
+
+	display: grid;
+	grid-template-columns: 1fr 5fr 1fr;
+}
+
+.hotel-result:nth-child(2) {
+	border-top: 1px solid var(--basic-gainsboro);
+}
+
+.hotel-img {
+	margin: 0;
+
+	padding-top: 6px;
+
+	width: 135px;
+	height: 90px;
+}
+
+.hotel-info {
+	margin: 0 14px;
+}
+
+.hotel-info h2 {
+	margin: 0;
+
+	padding-top: 0;
+}
+
+.hotel-info .hotel-type {
+	margin: 0;
+	padding-top: 7px;
+	padding-bottom: 6px;
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: start;
+
+}
+
+.hotel-info span {
+	margin: 0;
+	line-height: 21px;
+	width: 117px;
 }
 
 .hotel-name {
+	margin: 0; 
 	color: var(--basic-black);
-
-	outline: 5px solid rgba(240, 240, 0, 0.7);
-	outline-offset: -5px;
 }
 
-.hotel-name:hover {
+.hotel-name:hover, .hotel-name:focus {
 	color: var(--basic-seagull);
+}
+
+.hotel-name:active {
+	color: var(--black-thirty-percent);
+}
+
+.hotel-btn {
+	margin: 0;
+	padding-top: 10px;
+}
+
+.hotel-btn a {
+	margin-right: 3px;
+	margin-left: 0;
 }
 
 .more {
 	line-height: 21px;
 	font-weight: 700;
+	width: 110px;
 	color: var(--basic-white);
 	background-color: var(--basic-seagull);
 	padding: 3px 16px 3px 17px;
 }
 
-.more:hover {
+.more:hover, .more:focus {
 	background-color: var(--basic-seagull-hover);
+}
+
+.more:active {
+	background-color: var(--basic-seagull-active);
+	color: var(--white-thirty-percent);
 }
 
 .book-now {
@@ -690,32 +909,41 @@ input[type="checkbox"].visually-hidden {
 	padding: 3px 17px 3px 16px;
 }
 
-.book-now:hover {
+.book-now:hover, .book-now:focus {
 	background-color: var(--pine-cone-hover);
 }
 
+.book-now:active {
+	background-color: var(--pine-cone-active);
+	color: var(--white-thirty-percent);
+}
+
 .hotel-rating {
-	outline: 5px solid rgba(240, 90, 0, 0.7);
-	outline-offset: -5px;
+	margin: 0;
+	padding-top: 5px;
+	text-align: right;
 }
 
 .hotel-rating p {
-	outline: 5px solid rgba(90, 0, 150, 0.7);
-	outline-offset: -5px;
+	margin: 0;
+	padding-bottom: 40px;
 }
 
 .hotel-rating img {
-	outline: 5px solid rgba(90, 150, 0, 0.7);
-	outline-offset: -5px;
+	margin: 0;
 }
 
 .hotel-rating span {
-	color: var(--dim-gray);
-	background-color: var(--white-smoke-level1);
+	margin: 0;
+
 	padding: 3px 12px 3px 15px;
 
-	outline: 5px solid rgba(150, 90, 0, 0.7);
-	outline-offset: -5px;
+    line-height: 21px;
+
+    font-size: 14px;
+
+	color: var(--dim-gray);
+	background-color: var(--white-smoke-level1);
 }
 
 /* Main footer */
@@ -726,7 +954,7 @@ input[type="checkbox"].visually-hidden {
 
 .main-footer .content {
 	background-color: var(--white-ninety-percent);
-	padding-top: 20px;
+	padding-top: 23px;
 	padding-bottom: 26px;
 
 	display: grid;
@@ -749,10 +977,10 @@ input[type="checkbox"].visually-hidden {
 .footer-contacts h2, .footer-contacts p {
 	font-size: 21px;
 
-	padding-bottom: 9px;
-
 	margin-top: 0;
 	margin-bottom: 0;
+
+	padding-bottom: 9px;
 }
 
 .footer-contacts p {
