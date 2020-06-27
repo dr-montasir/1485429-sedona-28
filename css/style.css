@@ -540,6 +540,7 @@ input[type="checkbox"].visually-hidden {
 
 .hotel-search-form input[type="text"]::placeholder {
 	color: var(--basic-black);
+	opacity: 1;
 }
 
 .guests-quantity {
