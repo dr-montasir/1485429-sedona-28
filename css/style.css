@@ -24,6 +24,7 @@
 	--basic-gainsboro: #e5e5e5;
 	--very-light-grey: #cacaca;
 	--dim-gray: #666666;
+	--dark-gray-top: #ababab;
 	--dark-gray: #a9a9a9;
 	--basic-silver: #bdbbbc;
 
@@ -654,9 +655,9 @@ input[type="checkbox"].visually-hidden {
 }
 
 .sedona-map {
-	background-color: var(--basic-white);
-	
 	margin: 0;
+
+	background-color: var(--basic-white);
 }
 
 .sedona-map img {
@@ -664,35 +665,274 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter {
+	margin: 0;
+	padding: 27px 73px 31px 73px;
+
 	background: var(--basic-seagull) url("../img/filter-background.jpg") no-repeat center top;
 	color: var(--basic-white);
 	line-height: 21px;
 	font-size: 14px;
 }
 
-.filter-form {
-	outline: 5px solid rgba(211, 38, 0, 0.7);
-	outline-offset: -5px;
-}
-
-.filter-form button {
-	outline: 5px solid rgba(0, 0, 255, 0.3);
-	outline-offset: -5px;
-}
-
-.infrastructure, .housing-type, .cost-per-night {
-	outline: 5px solid rgba(211, 38, 0, 0.3);
-	outline-offset: -5px;
-}
-
 .filter fieldset {
-	border: 0;
+	border: none;
 }
 
 .filter legend {
 	font-size: 16px;
 	font-weight: 700;
 }
+
+/* Chrome, Safari, Edge, Opera */
+.filter input::-webkit-outer-spin-button,
+.filter input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+.filter input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.filter-form {
+	margin: 0;
+	padding: 0;
+
+	display: grid;
+
+	grid-template-columns: 2fr 4fr 2fr;
+}
+
+.infrastructure, .housing-type, .filter-last-col {
+	margin: 0;
+	padding: 0;
+}
+
+.housing-type {
+	padding-left: 8px;
+}
+
+.infrastructure legend,
+.housing-type legend {
+	margin: 0 0 3px 0;
+}
+
+.housing-type-item, 
+.infrastructure-item {
+	margin: 0;
+	padding: 0;
+	height: 23px;
+}
+
+.infrastructure-item:first-child,
+.housing-type-item:first-child {
+	margin: 0;
+	padding-top: 23px;
+}
+
+.infrastructure-item:not(:first-child),
+.housing-type-item:not(:first-child) {
+	margin: 0;
+	padding-top: 22px;
+}
+
+.filter-form input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox-item+label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+
+	cursor: pointer;
+}
+
+.checkbox-item+label::before {
+	content: '';
+	display: inline-block;
+
+	width: 27px;
+	height: 23px;
+	flex-shrink: 0;
+	flex-grow: 0;
+
+	background: url("../img/checkbox.svg");
+	background-color: inherit;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	opacity: 0.9;
+}
+
+.checkbox-item:hover+label::before,
+.checkbox-item:focus+label::before {
+	background-position: 0px 0px;
+	opacity: 1;
+}
+
+.infrastructure-item label::before {
+	margin-right: 13px;
+}
+
+.housing-type-item label::before {
+	margin-right: 17px;
+}
+
+.checkbox-item:checked+label::before {
+	background-position: 0px -72px;
+}
+
+.checkbox-item:checked:hover+label::before,
+.checkbox-item:checked:focus+label::before {
+	background-position: 0px -72px;
+	opacity: 1;
+}
+
+.checkbox-item:not(checked):disabled+label::before,
+.checkbox-item:not(checked):disabled+label {
+	background-position: 0px -48px;
+	cursor: not-allowed;
+}
+
+.checkbox-item:checked:disabled+label::before,
+.checkbox-item:checked:disabled+label {
+	background-position: 0px -120px;
+	cursor: not-allowed;
+}
+
+.filter-last-col {
+	margin: 0;
+	width: 317px;
+}
+
+.filter-item {
+	margin: 0;
+	padding: 0;
+}
+
+.range-filter {
+	margin: 10px 0 0 0;
+}
+
+.price-controls {
+	margin: 0;
+	
+	padding-top: 5px;
+	padding-bottom: 6px;
+
+	width: 313px;
+	border: 2px solid var(--basic-white); 
+	border-radius: 2px;
+}
+
+.price-controls label {
+	margin: 0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.price-controls .price-from {
+	margin-left: 65px;
+	padding-right: 9px;
+
+	border-right: 2px solid var(--basic-white);
+}
+
+.price-controls .price-to {
+	margin-left: 51px;
+}
+
+.price-controls .price {
+	width: 58px;
+	border: none;
+	background-color: inherit;
+	color: var(--basic-white);
+}
+
+.range-controls {
+	position: relative;
+	height: 22px;
+	padding-top: 20px;
+
+	margin-bottom: 13px;
+}
+
+.range-controls .scale {
+	height: 2px;
+
+	background-color: var(--white-thirty-percent);
+
+	margin-left: 4px;
+}
+
+.range-controls .bar {
+	width: 80%;
+	height: 2px;
+	background-color: var(--basic-white);
+
+	margin-left: 6px;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 11px;
+	left: 0;
+
+	width: 4px;
+	height: 4px;
+	padding: 0;
+	border: 7.5px solid var(--basic-white);
+	background-color: var(--dark-gray-top);
+	border-radius: 50%;
+	box-shadow: 0 2px 0 0 var(--dark-gray-top);
+	cursor: pointer;
+}
+
+.range-controls .toggle:hover {
+	top: 10px;
+	width: 5px;
+	height: 5px;
+	border: 8.5px solid var(--basic-white);
+}
+
+.range-controls .toggle-min {
+	left: 0;
+}
+
+.range-controls .toggle-max {
+	left: 252px;
+}
+
+.filter-btn {
+	margin: 0 11px 0 0;
+	text-align: center;
+}
+
+.filter-btn button {
+	border: 2px solid var(--basic-white);
+	height: 36px;
+	padding: 6px 34px 7px 33px;
+
+	line-height: 21px;
+
+	background-color: inherit;
+
+	color: var(--basic-white);
+
+	text-transform: uppercase;
+
+	cursor: pointer;
+}
+
+.filter-last-col button:hover, 
+.filter-last-col button:focus {
+	background-color: var(--basic-white);
+	color: var(--basic-black);
+}
+
 
 .filter-result {
 	background-color: var(--basic-white);
@@ -710,8 +950,6 @@ input[type="checkbox"].visually-hidden {
 
 	grid-template-columns: 1fr 1fr 6fr 1fr;
 }
-
-
 
 .found {
 	font-size: 21px;
