@@ -438,12 +438,77 @@ input[type="checkbox"].visually-hidden {
 	color: var(--white-thirty-percent);
 }
 
-/*display: none; I will do in the next step with JavaScript */
-
 .hotel-search {
 	font-weight: 700;
 	margin:0 auto;
 	width: 568px;
+}
+
+.switch-on {
+	display: block;
+	animation: bounce 0.6s;
+}
+
+.switch-off {
+	display: none;
+}
+
+.modal-error {
+  animation: shake 0.3s;
+}
+
+/* Animations */
+
+@keyframes bounce {
+	0% {
+		transform: translateY(-86px);
+	}
+
+  	20% {
+    	transform: translateY(0px);
+  	}
+
+  	40% {
+    	transform: translateY(-63px);
+  	}
+
+  	60% {
+    	transform: translateY(0px);
+  	}
+
+  	80% {
+    	transform: translateY(-40px);
+  	}
+
+  	100% {
+    	transform: translateY(0);
+  	}
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(5px);
+	}
+
+	20% {
+    	transform: translateX(-10px);
+  	}
+
+  	40% {
+    	transform: translateX(10px);
+  	}
+
+  	60% {
+    	transform: translateX(-10px);
+  	}
+
+  	80% {
+    	transform: translateX(5px);
+  	}
+
+  	100% {
+    	transform: translateX(0);
+  	}
 }
 
 .hotel-search-form {
@@ -660,8 +725,35 @@ input[type="checkbox"].visually-hidden {
 	background-color: var(--basic-white);
 }
 
-.sedona-map img {
-	margin-bottom: -128px;
+.map-image {
+	margin-bottom: -120px;
+	padding: 0;
+}
+
+.iframe {
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	overflow: hidden;
+}
+
+.iframe a {
+	color: var(--white-smoke-level2);
+	font-size: 12px;
+	position: absolute;
+	top:0px;
+}
+
+.iframe a:nth-child(2) {
+	top: 14px;
+}
+
+.iframe iframe {
+	margin: 0;
+	padding: 0;
+
+	position: relative;
 }
 
 .filter {
@@ -767,10 +859,16 @@ input[type="checkbox"].visually-hidden {
 	opacity: 0.9;
 }
 
-.checkbox-item:hover+label::before,
+.checkbox-item:hover+label::before {
+	background-position: 0px 0px;
+	opacity: 1;
+}
+
 .checkbox-item:focus+label::before {
 	background-position: 0px 0px;
 	opacity: 1;
+
+	outline: 2px solid var(--basic-gainsboro);
 }
 
 .infrastructure-item label::before {

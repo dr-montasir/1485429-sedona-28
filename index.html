@@ -158,7 +158,7 @@
 			    <form class="hotel-search-form" id="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
 			        <div class="arrival-date">
 			            <label for="arrival-date">Дата заезда:</label>
-			            <input type="text" name="arrival-date" id="arrival-date" placeholder="24 апреля 2017" required />
+			            <input type="text" name="arrival-date" id="arrival-date" placeholder="24 апреля 2017"/>
 			            <button class="button" type="button">
 			                <svg width="21" height="22" viewBox="0 0 21 22">
 			                    <path
@@ -173,7 +173,7 @@
 
 			        <div class="departure-date">
 			            <label for="departure-date">Дата выезда:</label>
-			            <input type="text" name="departure-date" id="departure-date" placeholder="4 июля 2017" required />
+			            <input type="text" name="departure-date" id="departure-date" placeholder="4 июля 2017"/>
 			            <button class="button" type="button">
 			                <svg width="21" height="22" viewBox="0 0 21 22">
 			                    <path
@@ -194,7 +194,7 @@
 			                		<rect width="12" height="3"/>
 			                	</svg>
 			                </button>
-			                <input type="number" name="adults" id="adults-field" min="1" max="10" value="2" required />
+			                <input type="number" name="adults" id="adults-field" min="" max="" value="2"/>
 			                <button class="button plus" type="button">
 			                	<svg width="11" height="11" viewBox="0 0 11 11">
 			                		<path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
@@ -209,7 +209,7 @@
 			                		<rect width="12" height="3"/>
 			                	</svg>
 			                </button>
-			                <input type="number" name="children" id="children-field" min="0" max="10" value="0" required />
+			                <input type="number" name="children" id="children-field" min="" max="" value="0"/>
 			                <button class="button plus" type="button">
 			                	<svg width="11" height="11" viewBox="0 0 11 11">
 			                		<path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
@@ -222,7 +222,13 @@
 			</section>
 
             <section class="sedona-map">
-                <img src="img/map.png" width="1199" height="593" alt="Карта">
+                <div class="iframe">
+                    <a href="https://yandex.ru/maps/110669/sedona/?utm_medium=mapframe&utm_source=maps">Седона</a>
+                    <a href="https://yandex.ru/maps/110669/sedona/?ll=-111.756269%2C34.871952&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D-111.760%252C34.870%26spn%3D0.030%252C0.029%26text%3DUnited%2520States%2520of%2520America%252C%2520Arizona%252C%2520Coconino%2520County%252C%2520Sedona&utm_medium=mapframe&utm_source=maps&z=14">Седона — Яндекс.Карты</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CCQhvUqigB" width="1199" height="473" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+
+                <img class="map-image" src="img/map.png" width="1199" height="593" alt="Карта">
             </section>
         </main>
         <!-- /End Main -->
@@ -263,7 +269,8 @@
         <!-- /End Footer -->
         
         <!-- Scripts -->
-        <script src="js/search-form.js"></script>
+        <script src="js/map.js"></script>
+        <script src="js/popup.js"></script>
         <!-- /End Scripts -->
     </body>
 </html>
