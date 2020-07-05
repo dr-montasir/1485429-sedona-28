@@ -856,19 +856,13 @@ input[type="checkbox"].visually-hidden {
 	background-color: inherit;
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
-.checkbox-item:hover+label::before {
-	background-position: 0px 0px;
-	opacity: 1;
-}
-
+.checkbox-item:hover+label::before,
 .checkbox-item:focus+label::before {
 	background-position: 0px 0px;
 	opacity: 1;
-
-	outline: 2px solid var(--basic-gainsboro);
 }
 
 .infrastructure-item label::before {
