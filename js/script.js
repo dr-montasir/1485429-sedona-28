@@ -9,6 +9,19 @@ var isStorageSupport = true;
 var adultsStorage = "";
 var childrenStorage = "";
 
+var iframe = document.querySelector(".iframe");
+var mapImage = document.querySelector(".map-image");
+var checkOnline = navigator.onLine;
+
+// Check if the internet connection is online or offline
+if (checkOnline == true) {
+	iframe.classList.add("switch-on");
+	mapImage.classList.add("visually-hidden");
+} else {
+	iframe.classList.add("switch-off");
+	mapImage.classList.remove("visually-hidden");
+}
+
 try {
   adultsStorage = localStorage.getItem("adults");
   childrenStorage = localStorage.getItem("children");
@@ -72,9 +85,10 @@ search.addEventListener("submit", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
 	if (evt.keyCode === 27) {
-		if (searchPopup.classList.contains("switch-on")) {
+		if (hotelSearch.classList.contains("switch-on")) {
 			evt.preventDefault();
-			searchPopup.classList.remove("switch-on");
+			hotelSearch.classList.remove("switch-on");
+			hotelSearch.classList.add("switch-off");
 			search.classList.remove("modal-error");
 		}
 	}

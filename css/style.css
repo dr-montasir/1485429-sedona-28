@@ -754,6 +754,8 @@ input[type="checkbox"].visually-hidden {
 	padding: 0;
 
 	position: relative;
+
+	border: 0;
 }
 
 .filter {
