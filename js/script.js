@@ -15,10 +15,10 @@ var checkOnline = navigator.onLine;
 
 // Check if the internet connection is online or offline
 if (checkOnline == true) {
-	iframe.classList.add("switch-on");
+	iframe.classList.remove("visually-hidden");
 	mapImage.classList.add("visually-hidden");
 } else {
-	iframe.classList.add("switch-off");
+	iframe.classList.add("visually-hidden");
 	mapImage.classList.remove("visually-hidden");
 }
 
