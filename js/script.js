@@ -1,5 +1,5 @@
-var searchPopup = document.querySelector('.search-popup');
-var hotelSearch = document.querySelector('.hotel-search');
+var searchPopup = document.querySelector(".search-popup");
+var hotelSearch = document.querySelector(".hotel-search");
 var search = document.querySelector(".hotel-search-form");
 var arrivalDate = document.querySelector("[name=arrival-date]");
 var departureDate = document.querySelector("[name=departure-date]");

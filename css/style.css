@@ -24,6 +24,7 @@
 	--basic-gainsboro: #e5e5e5;
 	--very-light-grey: #cacaca;
 	--dim-gray: #666666;
+	--light-slate-gray: #778899;
 	--dark-gray-top: #ababab;
 	--dark-gray: #a9a9a9;
 	--basic-silver: #bdbbbc;
@@ -61,14 +62,14 @@ img {
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 /* Grid */
@@ -84,7 +85,7 @@ input[type="checkbox"].visually-hidden {
 	align-content: start;
 
 	width: 1200px;
-	margin:0 auto;
+	margin: 0 auto;
 
 	box-shadow: 0px 5px 15px var(--shadow-dark-green-twenty-percent);
 }
@@ -207,6 +208,7 @@ input[type="checkbox"].visually-hidden {
 	height: 509px;
 	background: url(../img/intro-mask.svg) no-repeat center bottom, 
 				url("../img/intro-background.jpg") no-repeat center -1px;
+	background-color: var(--light-slate-gray);
 }
 
 .intro-welcome img {
@@ -214,29 +216,29 @@ input[type="checkbox"].visually-hidden {
 	padding-top: 76.35px;
 }
 
+.intro-content,
 .introduction h2,
-.introduction p,
-.intro-content {
+.introduction p {
 	margin: 0;
 }
 
 .intro-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding-top: 41px;
 	padding-bottom: 52px;
 }
 
 .introduction h2 {
 	padding-bottom: 22px;
+	width: 470px;
 	font-size: 21px;
-
-	margin: 0 auto;
 }
 
 .introduction p {
-	color: var(--night-rider);
 	padding-top: 22px;
-
-	margin: 0 auto;
+	color: var(--night-rider);
 }
 
 /* Advantages Section */
@@ -255,10 +257,9 @@ input[type="checkbox"].visually-hidden {
 }
 
 .real-town {
+	margin: 0;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-
-	margin: 0;
 }
 
 .real-town-wraper, .bridge-wraper {
@@ -270,16 +271,15 @@ input[type="checkbox"].visually-hidden {
 }
 
 .real-town h2, .bridge h2 {
+	margin: 0;
 	padding-top: 16px;
 	padding-bottom: 16px;
-	margin: 0;
 }
 
 .real-town h3, .bridge h3 {
+	margin: 0;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
-	margin: 0;
 }
 
 .real-town p, .bridge p {
@@ -350,7 +350,6 @@ input[type="checkbox"].visually-hidden {
 .area h2, .road h2, .tourist h2 {
 	margin: 0;
 	padding-top: 47px;
-	padding-bottom: 54x;
 }
 
 .area h3, .road h3, .tourist h3 {
@@ -361,7 +360,7 @@ input[type="checkbox"].visually-hidden {
 .area p, .road p, .tourist p {
 	margin: 0;
 	padding-top: 23px;
-	padding-bottom: 56px;
+	padding-bottom: 54px;
 
 	line-height: 21px
 }
@@ -387,7 +386,7 @@ input[type="checkbox"].visually-hidden {
 	font-size: 30px;
 
 	margin: 0;
-	padding-top: 57px;
+	padding-top: 58px;
 }
 
 .interested p {
@@ -418,6 +417,8 @@ input[type="checkbox"].visually-hidden {
 	padding: 30px 9px 30px 10px;
 
 	position: relative;
+
+	z-index: 3;
 }
 
 /* Hover - Наведение */
@@ -440,8 +441,10 @@ input[type="checkbox"].visually-hidden {
 
 .hotel-search {
 	font-weight: 700;
-	margin:0 auto;
+	margin: 0 auto;
 	width: 568px;
+
+	z-index: 2;
 }
 
 .switch-on {
@@ -454,7 +457,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .modal-error {
-  animation: shake 0.3s;
+	animation: shake 0.3s;
 }
 
 /* Animations */
@@ -723,6 +726,8 @@ input[type="checkbox"].visually-hidden {
 	margin: 0;
 
 	background-color: var(--basic-white);
+
+	z-index: 1;
 }
 
 .map-image {
@@ -834,12 +839,12 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter-form input[type="checkbox"] {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
 }
 
-.checkbox-item+label {
+.checkbox-item + label {
 	display: inline-flex;
 	align-items: center;
 	user-select: none;
@@ -847,9 +852,9 @@ input[type="checkbox"].visually-hidden {
 	cursor: pointer;
 }
 
-.checkbox-item+label::before {
+.checkbox-item + label::before {
 	content: '';
-	display: inline-block;
+	display: block;
 
 	width: 27px;
 	height: 23px;
@@ -863,8 +868,8 @@ input[type="checkbox"].visually-hidden {
 	opacity: 0.8;
 }
 
-.checkbox-item:hover+label::before,
-.checkbox-item:focus+label::before {
+.checkbox-item:hover + label::before,
+.checkbox-item:focus + label::before {
 	background-position: 0px 0px;
 	opacity: 1;
 }
@@ -877,24 +882,24 @@ input[type="checkbox"].visually-hidden {
 	margin-right: 17px;
 }
 
-.checkbox-item:checked+label::before {
+.checkbox-item:checked + label::before {
 	background-position: 0px -72px;
 }
 
-.checkbox-item:checked:hover+label::before,
-.checkbox-item:checked:focus+label::before {
+.checkbox-item:checked:hover + label::before,
+.checkbox-item:checked:focus + label::before {
 	background-position: 0px -72px;
 	opacity: 1;
 }
 
-.checkbox-item:not(checked):disabled+label::before,
-.checkbox-item:not(checked):disabled+label {
+.checkbox-item:not(checked):disabled + label::before,
+.checkbox-item:not(checked):disabled + label {
 	background-position: 0px -48px;
 	cursor: not-allowed;
 }
 
-.checkbox-item:checked:disabled+label::before,
-.checkbox-item:checked:disabled+label {
+.checkbox-item:checked:disabled + label::before,
+.checkbox-item:checked:disabled + label {
 	background-position: 0px -120px;
 	cursor: not-allowed;
 }
@@ -1072,17 +1077,12 @@ input[type="checkbox"].visually-hidden {
 	flex-wrap: wrap;
 }
 
-.sort-by li:nth-child(7n + 1),
-.sort-by li:nth-child(7n + 3),
-.sort-by li:nth-child(7n + 5),
-.sort-by li:nth-child(7n + 7) {
-	padding-right: 33px;
+.sort-by li:nth-child(2n + 1) {
+	padding-right: 32px;
 }
 
-.sort-by li:nth-child(7n + 2),
-.sort-by li:nth-child(7n + 4),
-.sort-by li:nth-child(7n + 6) {
-	padding-right: 32px;
+.sort-by li:nth-child(2n + 2) {
+	padding-right: 33px;
 }
 
 /* None or Normal - Покой */
